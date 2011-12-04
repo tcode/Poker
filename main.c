@@ -32,8 +32,9 @@ int generateHoldCards()
 int card;
 
 
-card = Randomizer();
-printf("%d\n", card);
+card = Randomizer(); //Here I should implement the check whether the cards are dealt !,
+//if they are dealt I should call Randomizer again!
+printf("%d\n", (abs((card%52+1))));
 /*
  * All the cards since this will only play hold 'em I only need to give 2 cards!
  * Okay this might be quite ineffecient since I will still need to check whether that 
@@ -56,5 +57,41 @@ printf("%d\n", card);
  */
 return 0;
 }
+
+void showcards(int card1, int card2)
+{
+int i;
+for (i=0; i < 2; i++)
+{
+if (card1 = 1)
+{
+        printf("Card 1 = 2 of Heart's\n");
+}
+else if (card1 = 2)
+        {
+        printf("Card 1 = 3 of Heart's\n");
+}
+if (card2 = 1)
+{
+        printf("Card 2 = 2 of hearts");
+}
+}
+}
+/* ********************************** */
+
+
+
+/* ********************************** */
+void availableCards()
+{
+int* undealt;
+undealt = (int*)calloc(53, 4);
+int i;
+for(i=0; i < 52; i++)
+{
+        undealt[i] = i;
+}
+}
+
 
 
