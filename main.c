@@ -24,13 +24,6 @@ void randOpp()
 int c1, c2;
 c1 = generateHoldCards();
 c2 = generateHoldCards();
-generateHoldCards();
-
-generateHoldCards();
-generateHoldCards();
-generateHoldCards();
-generateHoldCards();
-generateHoldCards();
 }
 
 
@@ -39,7 +32,7 @@ int generateHoldCards()
 int card;
 
 
-card = generateRandomNumbers();
+card = Randomizer();
 printf("%d\n", card);
 /*
  * All the cards since this will only play hold 'em I only need to give 2 cards!
@@ -65,13 +58,3 @@ return 0;
 }
 
 
-int generateRandomNumbers()
-{
-int randInt = abs((random()*time(NULL)%51+1));
-/*
-* The idea is to make a system where some numbers will fall through some tests, and make them so
-* that fewer numbers fall through the further we get.
-* The basis could be something along a maze pulled by gravity
-*/
-return randInt;
-}
